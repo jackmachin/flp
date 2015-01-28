@@ -57,16 +57,17 @@ $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
  don't forget to remove it for your site.
 */
 $lato:              'Lato', $sans-serif;
+$oswald: 'Oswald', $sans-serif;
+$open: 'Open Sans', $sans-serif;
 
 /*
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
 p, a, h1  {
-  -ms-word-break: break-all;
-  -ms-word-wrap: break-all;
-      word-break: break-word;
-     word-break: break-word;
+  -ms-word-wrap: break-word;
+  word-break: break-word; //non-standart css for webkit
+  word-wrap: break-word;
  }
 p {
   // cleaning up the ragged lines and breaks

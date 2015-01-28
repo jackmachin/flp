@@ -14,40 +14,40 @@ Stylesheet: Layout Stylesheet
 .container {
 	@include clearfix;
 	width: 100%;
-	margin: 10px 0;
 }
 
 #container {}
 
-  .header {}
+  .header {
+       @include grid(12); 
+  }
   
     #inner-header {}
     
       .logo-container {
-        @include grid(4);
+        @include grid(2);
         @include break(tablet, 12); 
         @include break(mobile, 12);
       }
       
-      #sidebar-header {
-        @include grid(4, $push:4);
-        @include break(tablet, 12); 
-        @include break(mobile, 12);
-      }
-  .nav {}
+  .nav {
+    @include grid(10);
+    @include break(tablet, 12); 
+    @include break(mobile, 12);
+  }
 
   #content {}
   
     #inner-content {}
-    
-      .full {
-        @include grid (12);
-      }
+   
 
       #main, .main {
-        @include grid(8);
+        @include grid(12);
+      }
+      
+      .card {
+        @include grid(4);
         @include break(tablet, 12); 
-        @include break(mobile, 12);
       }
 
        .sidebar {

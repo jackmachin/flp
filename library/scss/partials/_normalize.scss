@@ -84,6 +84,8 @@ body {
 	margin-top: 1.5em;
 }
 
+
+
 // Fix for admin bar 
 
 #wpadminbar {
@@ -93,6 +95,12 @@ body {
 // Fix for LI
 
 li  + li {
+margin-top: 0;
+}
+
+// Fix for LI
+
+section + section {
 margin-top: 0;
 }
 /* ==========================================================================

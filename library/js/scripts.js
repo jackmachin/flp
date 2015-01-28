@@ -121,4 +121,5 @@ jQuery(document).ready(function($) {
         $(this).children('.sub-menu').slideUp(200);
     }
   );
+
 }); /* end of as page load scripts */

@@ -209,7 +209,7 @@ NAVIGATION STYLES
   /* highlight current page */
   /* end current highlighters */ }
   .nav ul {
-    background: #323944;
+    background: #000;
     margin-top: 0; }
   .nav li {
     float: left;
@@ -308,8 +308,8 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
-.wrap {
-  width: 1040px; }
+.card {
+  min-height: 700px; }
 
 /*
 you can call the larger styles if you want, but there's really no need

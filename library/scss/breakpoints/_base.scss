@@ -16,7 +16,7 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $lato;
+	font-family: $open;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
@@ -108,7 +108,9 @@ H1, H2, H3, H4, H5 STYLES
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	text-rendering: optimizelegibility;
-	font-weight: 500;
+	font-weight: 700;
+  font-family: $oswald;
+
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -123,6 +125,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 h1, .h1 {
 	font-size: 2.5em;
 	line-height: 1.333em;
+  text-transform: uppercase;
 }
 
 h2, .h2 {
@@ -153,12 +156,17 @@ HEADER STYLES
 
 .header {
 	background-color: $header-bg;
+  color: $white;
+  position: fixed;
+  top:0;
 }
 
 	#logo {
 		margin: 0;
+    font-size: 4em;
 
 		a {
+      color: $white;
 		}
 	}
 
@@ -176,11 +184,11 @@ and more scalable.
 
 nav {
   background-color: $nav-bg;
+  margin: 0;
 }
 
 .nav {
 	border-bottom: 0;
-	margin: 0;
 
 
 	li {
@@ -190,6 +198,9 @@ nav {
 			color: $white;
 			text-decoration: none;
 			padding: 0.75em;
+      text-transform: uppercase;
+      font-family: $oswald;
+      font-weight: 700;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -251,15 +262,87 @@ nav {
 
 
 /*********************
+SECTION STYLES
+*********************/
+
+#mission {
+  margin-top: 4em;
+}
+#programmes {
+  background-color:  #F44336;
+  padding: 1.5em 0;
+  
+  h2, h3 {
+    color: #d32f2f;
+  }
+}
+
+#candidates {
+  background-color:  #673AB7;
+  padding: 1.5em 0;
+  
+  h2, h3 {
+    color: #512da8;
+  }
+}
+
+#employer {
+  background-color:  #00bcd4;
+  padding: 1.5em 0;
+  
+  h2, h3 {
+    color: #0097a7;
+  }
+}
+
+#corporate {
+  background-color:  #ff5722;
+  padding: 1.5em 0;
+  
+  h2, h3 {
+    color: #e64a19;
+  }
+}
+
+#about {
+  background-color:  #4caf50;
+  padding: 1.5em 0;
+  
+  h2, h3 {
+    color: #388e3c;
+  }
+}
+
+#contact {
+  background-color:  #2196f3;
+  padding: 1.5em 0;
+  
+  h2, h3 {
+    color: #1976d2;
+  }
+}
+
+/*********************
 POSTS & CONTENT STYLES
 *********************/
 
 #content {
 }
-		.hentry {
+
+  .section-title, .card-title {
+    text-align: center;
+  }
+  
+  .section-title {
+    color: $black;
+  }
+
+    .hentry, .card {
 			background-color: $article-bg;
 			border-radius: 3px;
 			border: 1px solid $border-color;
+      padding: 1.5em;
+      box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 
 			header {
 				border-bottom: 1px solid $light-gray;
@@ -311,7 +394,7 @@ POSTS & CONTENT STYLES
 		}
 
 		/* entry content */
-		.entry-content {
+		.entry-content, .card {
 			padding: 0 1.5em 0;
 
 			p {
@@ -965,6 +1048,7 @@ FOOTER STYLES
 	clear: both;
 	background-color: $footer-bg;
 	color: $light-gray;
+  margin: 0;
 }
 
 	/*
@@ -987,4 +1071,6 @@ FOOTER STYLES
 	} /* end .footer-links */
 
 
-	.copyright {}
+	.copyright {
+  margin: 0;
+  }

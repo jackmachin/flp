@@ -83,6 +83,9 @@ body {
 li + li {
   margin-top: 0; }
 
+section + section {
+  margin-top: 0; }
+
 /* ==========================================================================
    Links
    ========================================================================== */
@@ -479,10 +482,9 @@ some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
 p, a, h1 {
-  -ms-word-break: break-all;
-  -ms-word-wrap: break-all;
+  -ms-word-wrap: break-word;
   word-break: break-word;
-  word-break: break-word; }
+  word-wrap: break-word; }
 
 p {
   -webkit-hyphens: auto;
@@ -807,16 +809,22 @@ Stylesheet: Layout Stylesheet
     clear: both; }
 
 .container {
-  width: 100%;
-  margin: 10px 0; }
+  width: 100%; }
   .container:after {
     content: "";
     display: table;
     clear: both; }
 
+.header {
+  float: left;
+  width: 100%;
+  margin-right: 2%; }
+  .header:last-child {
+    margin-right: 0; }
+
 .logo-container {
   float: left;
-  width: 32%;
+  width: 15%;
   margin-right: 2%; }
   .logo-container:last-child {
     margin-right: 0; }
@@ -830,45 +838,40 @@ Stylesheet: Layout Stylesheet
       width: 100%;
       margin: 1%; } }
 
-#sidebar-header {
+.nav {
   float: left;
-  width: 32%;
-  margin-left: 34%;
+  width: 83%;
   margin-right: 2%; }
-  #sidebar-header:last-child {
+  .nav:last-child {
     margin-right: 0; }
   @media only screen and (max-width: 767px) {
-    #sidebar-header {
+    .nav {
       width: 100%;
       margin: 1%;
       margin-left: 0; } }
   @media only screen and (max-width: 480px) {
-    #sidebar-header {
+    .nav {
       width: 100%;
       margin: 1%; } }
-
-.full {
-  float: left;
-  width: 100%;
-  margin-right: 2%; }
-  .full:last-child {
-    margin-right: 0; }
 
 #main, .main {
   float: left;
-  width: 66%;
+  width: 100%;
   margin-right: 2%; }
   #main:last-child, .main:last-child {
     margin-right: 0; }
+
+.card {
+  float: left;
+  width: 32%;
+  margin-right: 2%; }
+  .card:last-child {
+    margin-right: 0; }
   @media only screen and (max-width: 767px) {
-    #main, .main {
+    .card {
       width: 100%;
       margin: 1%;
       margin-left: 0; } }
-  @media only screen and (max-width: 480px) {
-    #main, .main {
-      width: 100%;
-      margin: 1%; } }
 
 .sidebar {
   float: left;
@@ -939,7 +942,7 @@ you can just remove this stylesheet.
   background: #d5edf8; }
 
 .alert-error {
-  border-color: #f8cdcf;
+  border-color: #f8cdce;
   background: #fbe3e4; }
 
 .alert-success {
@@ -1000,9 +1003,9 @@ and it will create a button dependant on those variables.
 .blue-btn, .comment-reply-link, #submit {
   background-color: #2980b9; }
   .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
-    background-color: #2576a8; }
+    background-color: #2574a8; }
   .blue-btn:active, .comment-reply-link:active, #submit:active {
-    background-color: #2473a4; }
+    background-color: #2472a4; }
 
 /******************************************************************
 Site Name:
@@ -1031,7 +1034,7 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   padding: 0 12px;
   margin-bottom: 14px;
   font-size: 1em;
-  color: #5c6b80;
+  color: #000;
   border-radius: 3px;
   vertical-align: middle;
   box-shadow: none;
@@ -1104,11 +1107,11 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 body {
-  font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #5c6b80;
-  background-color: #eaedf2;
+  color: #000;
+  background-color: #fff;
   -webkit-font-smoothing: antialiased; }
 
 /********************
@@ -1166,7 +1169,7 @@ a, a:visited {
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #216793; }
+    color: #216693; }
   a:link, a:visited:link {
     /*
 		this highlights links on iPhones/iPads.
@@ -1180,7 +1183,8 @@ H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
-  font-weight: 500;
+  font-weight: 700;
+  font-family: 'Oswald', "Helvetica Neue", Helvetica, Arial, sans-serif;
   /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -1191,7 +1195,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 h1, .h1 {
   font-size: 2.5em;
-  line-height: 1.333em; }
+  line-height: 1.333em;
+  text-transform: uppercase; }
 
 h2, .h2 {
   font-size: 1.75em;
@@ -1215,10 +1220,16 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #fff; }
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  top: 0; }
 
 #logo {
-  margin: 0; }
+  margin: 0;
+  font-size: 4em; }
+  #logo a {
+    color: #fff; }
 
 /*********************
 NAVIGATION STYLES
@@ -1231,11 +1242,11 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 nav {
-  background-color: #323944; }
+  background-color: #000;
+  margin: 0; }
 
 .nav {
   border-bottom: 0;
-  margin: 0;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */ }
@@ -1252,6 +1263,9 @@ nav {
       color: #fff;
       text-decoration: none;
       padding: 0.75em;
+      text-transform: uppercase;
+      font-family: 'Oswald', "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700;
       /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -1263,19 +1277,69 @@ nav {
 
 /* end .nav */
 /*********************
+SECTION STYLES
+*********************/
+#mission {
+  margin-top: 4em; }
+
+#programmes {
+  background-color: #F44336;
+  padding: 1.5em 0; }
+  #programmes h2, #programmes h3 {
+    color: #d32f2f; }
+
+#candidates {
+  background-color: #673AB7;
+  padding: 1.5em 0; }
+  #candidates h2, #candidates h3 {
+    color: #512da8; }
+
+#employer {
+  background-color: #00bcd4;
+  padding: 1.5em 0; }
+  #employer h2, #employer h3 {
+    color: #0097a7; }
+
+#corporate {
+  background-color: #ff5722;
+  padding: 1.5em 0; }
+  #corporate h2, #corporate h3 {
+    color: #e64a19; }
+
+#about {
+  background-color: #4caf50;
+  padding: 1.5em 0; }
+  #about h2, #about h3 {
+    color: #388e3c; }
+
+#contact {
+  background-color: #2196f3;
+  padding: 1.5em 0; }
+  #contact h2, #contact h3 {
+    color: #1976d2; }
+
+/*********************
 POSTS & CONTENT STYLES
 *********************/
-.hentry {
+.section-title, .card-title {
+  text-align: center; }
+
+.section-title {
+  color: #000; }
+
+.hentry, .card {
   background-color: #fff;
   border-radius: 3px;
-  border: 1px solid #ccc; }
-  .hentry header {
+  border: 1px solid #ccc;
+  padding: 1.5em;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28); }
+  .hentry header, .card header {
     border-bottom: 1px solid #f8f9fa;
     padding: 1.5em; }
-  .hentry footer {
+  .hentry footer, .card footer {
     padding: 1.5em;
     border-top: 1px solid #f8f9fa; }
-    .hentry footer p {
+    .hentry footer p, .card footer p {
       margin: 0; }
 
 /* end .hentry */
@@ -1298,7 +1362,7 @@ POSTS & CONTENT STYLES
   margin: 0; }
 
 /* entry content */
-.entry-content {
+.entry-content, .card {
   padding: 0 1.5em 0;
   /*
 			image alignment on a screen this size may be
@@ -1306,53 +1370,53 @@ POSTS & CONTENT STYLES
 			and floating images at the next breakpoint,
 			but it's up to you. Feel free to change it up.
 			*/ }
-  .entry-content ul, .entry-content ol {
+  .entry-content ul, .entry-content ol, .card ul, .card ol {
     margin-left: 2em; }
-  .entry-content ul {
+  .entry-content ul, .card ul {
     list-style-type: disc; }
-  .entry-content ol {
+  .entry-content ol, .card ol {
     list-style-type: decimal; }
-  .entry-content table {
+  .entry-content table, .card table {
     width: 100%;
     border: 1px solid #eaedf2; }
-    .entry-content table caption {
+    .entry-content table caption, .card table caption {
       margin: 0 0 7px;
       font-size: 0.75em;
       color: #9fa6b4;
       text-transform: uppercase;
       letter-spacing: 1px; }
-  .entry-content tr {
+  .entry-content tr, .card tr {
     border-bottom: 1px solid #eaedf2; }
-    .entry-content tr:nth-child(even) {
+    .entry-content tr:nth-child(even), .card tr:nth-child(even) {
       background-color: #f8f9fa; }
-  .entry-content td {
+  .entry-content td, .card td {
     padding: 7px;
     border-right: 1px solid #eaedf2; }
-    .entry-content td:last-child {
+    .entry-content td:last-child, .card td:last-child {
       border-right: 0; }
-  .entry-content th {
+  .entry-content th, .card th {
     background-color: #f8f9fa;
     border-bottom: 1px solid #eaedf2;
     border-right: 1px solid #eaedf2; }
-    .entry-content th:last-child {
+    .entry-content th:last-child, .card th:last-child {
       border-right: 0; }
-  .entry-content blockquote {
+  .entry-content blockquote, .card blockquote {
     padding: 0 0 0 0.75em;
     border-left: 3px solid #2980b9;
     font-style: italic;
     color: #9fa6b4; }
-  .entry-content dd {
+  .entry-content dd, .card dd {
     margin-left: 0;
     font-size: 0.9em;
     color: #787878; }
-  .entry-content img {
+  .entry-content img, .card img {
     max-width: 100%;
     height: auto; }
-  .entry-content .size-auto, .entry-content .size-full, .entry-content .size-large, .entry-content .size-medium, .entry-content .size-thumbnail {
+  .entry-content .size-auto, .entry-content .size-full, .entry-content .size-large, .entry-content .size-medium, .entry-content .size-thumbnail, .card .size-auto, .card .size-full, .card .size-large, .card .size-medium, .card .size-thumbnail {
     max-width: 100%;
     height: auto; }
-  .entry-content pre {
-    background: #323944;
+  .entry-content pre, .card pre {
+    background: #000;
     color: #f8f9fa;
     font-size: 0.9em;
     padding: 1.5em;
@@ -1492,10 +1556,10 @@ PAGE NAVI STYLES
       color: #fff; }
   .pagination .current {
     cursor: default;
-    color: #5c6b80; }
+    color: #000; }
     .pagination .current:hover, .pagination .current:focus {
       background-color: #fff;
-      color: #5c6b80; }
+      color: #000; }
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
@@ -1606,7 +1670,7 @@ COMMENT FORM STYLES
   font-style: italic;
   margin: 0; }
   .logged-in-as a {
-    color: #5c6b80; }
+    color: #000; }
 
 .comment-form-comment {
   margin: 1.5em 0 0.75em; }
@@ -1654,8 +1718,9 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #323944;
-  color: #f8f9fa; }
+  background-color: #000;
+  color: #f8f9fa;
+  margin: 0; }
 
 /*
 	if you checked out the link above:
@@ -1667,6 +1732,9 @@ FOOTER STYLES
 	view.
 	*/
 /* end .footer-links */
+.copyright {
+  margin: 0; }
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -1700,21 +1768,6 @@ them in here, they won't work.
 NAVIGATION STYLES
 *********************/
   /* .menu is clearfixed inside mixins.scss */
-  /* end .menu */
-  /*********************
-POSTS & CONTENT STYLES
-*********************/
-  /* entry content */
-  /* end .entry-content */
-  /* at this larger size, we can start to align images */
-  /*********************
-FOOTER STYLES
-*********************/
-  /*
-check your menus here. do they look good?
-do they need tweaking?
-*/
-  /* end .footer-links */
   .menu {
     /* end .menu ul */ }
     .menu ul {
@@ -1730,6 +1783,13 @@ do they need tweaking?
 					you can use hover styles here even though this size
 					has the possibility of being a mobile device.
 					*/ }
+  /* end .menu */
+  /*********************
+POSTS & CONTENT STYLES
+*********************/
+  /* entry content */
+  /* end .entry-content */
+  /* at this larger size, we can start to align images */
   .alignleft, img.alignleft {
     margin-right: 1.5em;
     display: inline;
@@ -1742,7 +1802,15 @@ do they need tweaking?
     margin-right: auto;
     margin-left: auto;
     display: block;
-    clear: both; } }
+    clear: both; }
+  /*********************
+FOOTER STYLES
+*********************/
+  /*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+  /* end .footer-links */ }
 
 /*********************
 TABLET & SMALLER LAPTOPS
@@ -1776,37 +1844,13 @@ HEADER STYLES
   /*********************
 NAVIGATION STYLES
 *********************/
-  /* end .nav */
-  /*********************
-SIDEBARS & ASIDES
-*********************/
-  /* links widget */
-  /* meta widget */
-  /* pages widget */
-  /* recent-posts widget */
-  /* archives widget */
-  /* tag-cloud widget */
-  /* calendar widget */
-  /* category widget */
-  /* recent-comments widget */
-  /* search widget */
-  /* text widget */
-  /*********************
-FOOTER STYLES
-*********************/
-  /*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
-  /* end .footer-links */
   .nav {
     border: 0;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */ }
     .nav ul {
-      background: #323944;
+      background: #000;
       margin-top: 0; }
     .nav li {
       float: left;
@@ -1851,6 +1895,10 @@ mobile. Make sure to double check these!
             left: 100%; }
       .nav li:hover > ul {
         top: auto; }
+  /* end .nav */
+  /*********************
+SIDEBARS & ASIDES
+*********************/
   .widgettitle {
     border-bottom: 2px solid #444; }
   .widget {
@@ -1861,12 +1909,32 @@ mobile. Make sure to double check these!
       .widget ul li ul {
         margin-top: 0.75em;
         padding-left: 1em; }
+  /* links widget */
+  /* meta widget */
+  /* pages widget */
+  /* recent-posts widget */
+  /* archives widget */
+  /* tag-cloud widget */
+  /* calendar widget */
+  /* category widget */
+  /* recent-comments widget */
+  /* search widget */
+  /* text widget */
+  /*********************
+FOOTER STYLES
+*********************/
+  /*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
   .footer-links ul li {
     /*
 			be careful with the depth of your menus.
 			it's very rare to have multi-depth menus in
 			the footer.
-			*/ } }
+			*/ }
+  /* end .footer-links */ }
 
 /*********************
 DESKTOP
@@ -1885,73 +1953,19 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
-  .wrap {
-    width: 1040px; } }
+  .card {
+    min-height: 700px; } }
 
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
 *********************/
-@media only screen and (min-width: 1240px) {
-  /******************************************************************
-Site Name: 
-Author: 
-
-Stylesheet: Super Large Monitor Stylesheet
-
-You can add some advanced styles here if you like. This kicks in
-on larger screens.
-
-******************************************************************/ }
-
 /*********************
 RETINA (2x RESOLUTION DEVICES)
 This applies to the retina iPhone (4s) and iPad (2,3) along with
 other displays with a 2x resolution. You can also create a media
 query for retina AND a certain size if you want. Go Nuts.
 *********************/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /******************************************************************
-Site Name: 
-Author: 
-
-Stylesheet: Retina Screens & Devices Stylesheet
-
-When handling retina screens you need to make adjustments, especially
-if you're not using font icons. Here you can add them in one neat
-place.
-
-******************************************************************/
-  /* 
-
-EXAMPLE 
-Let's say you have an image and you need to make sure it looks ok
-on retina screens. Let's say we have an icon which dimension are
-24px x 24px. In your regular stylesheets, it would look something
-like this:
-
-.icon {
-	width: 24px;
-	height: 24px;
-	background: url(img/test.png) no-repeat;
-}
-
-For retina screens, we have to make some adjustments, so that image
-doesn't look blurry. So, taking into account the image above and the
-dimensions, this is what we would put in our retina stylesheet:
-
-.icon {
-	background: url(img/test@2x.png) no-repeat;
-	background-size: 24px 24px;
-}
-
-So, you would create the same icon, but at double the resolution, meaning 
-it would be 48px x 48px. You'd name it the same, but with a @2x at the end
-(this is pretty standard practice). Set the background image so it matches
-the original dimensions and you are good to go. 
-
-*/ }
-
 /*********************
 PRINT STYLESHEET
 Feel free to customize this. Remember to add things that won't make
@@ -1970,9 +1984,6 @@ of reasons to edit this stylesheet. If you want to
 though, go for it.
 
 ******************************************************************/
-  @page {
-    margin: 0.5cm; }
-
   * {
     background: transparent !important;
     color: black !important;
@@ -1997,6 +2008,9 @@ though, go for it.
     page-break-inside: avoid; }
   img {
     max-width: 100% !important; }
+  @page {
+    margin: 0.5cm; }
+
   p, h2, h3 {
     orphans: 3;
     widows: 3; }
