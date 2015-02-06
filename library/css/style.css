@@ -1322,8 +1322,6 @@ SECTION STYLES
   /* Set a background color that will be displayed
      while the background image is loading */
   background-color: #464646; }
-  #programmes h2, #programmes h3 {
-    color: #d32f2f; }
 
 #candidates {
   padding: 1.5em 0;
@@ -1342,32 +1340,22 @@ SECTION STYLES
   /* Set a background color that will be displayed
      while the background image is loading */
   background-color: #464646; }
-  #candidates h2, #candidates h3 {
-    color: #512da8; }
 
 #employer {
   background-color: #00bcd4;
   padding: 1.5em 0; }
-  #employer h2, #employer h3 {
-    color: #0097a7; }
 
 #corporate {
   background-color: #ff5722;
   padding: 1.5em 0; }
-  #corporate h2, #corporate h3 {
-    color: #e64a19; }
 
 #about {
   background-color: #4caf50;
   padding: 1.5em 0; }
-  #about h2, #about h3 {
-    color: #388e3c; }
 
 #contact {
   background-color: #2196f3;
   padding: 1.5em 0; }
-  #contact h2, #contact h3 {
-    color: #1976d2; }
 
 /*********************
 POSTS & CONTENT STYLES
