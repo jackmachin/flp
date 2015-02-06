@@ -1343,7 +1343,8 @@ SECTION STYLES
 POSTS & CONTENT STYLES
 *********************/
 .content {
-  padding-top: 3.5em; }
+  padding-top: 3.5em;
+  margin-top: 0; }
 
 .section-title, .card-title {
   text-align: center; }
