@@ -287,28 +287,10 @@ SECTION STYLES
 }
 
 #candidates {
-  background-color:  #673AB7;
   padding: 1.5em 0;
   
-  h2, h3 {
-    color: #512da8;
-  }
-}
-
-#employer {
-  background-color:  #00bcd4;
-  padding: 1.5em 0;
-  
-  h2, h3 {
-    color: #0097a7;
-  }
-}
-
-#corporate {
-  padding: 1.5em 0;
-  
-    /* Location of the image */
-  background-image: url(/wp-content/themes/flp/library/images/candidates.jpg);
+      /* Location of the image */
+  background-image: url(/library/images/candidates.jpg);
   
   /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
@@ -326,7 +308,25 @@ SECTION STYLES
   
   /* Set a background color that will be displayed
      while the background image is loading */
+  background-color: #464646;
+  
+  h2, h3 {
+    color: #512da8;
+  }
+}
+
+#employer {
+  background-color:  #00bcd4;
+  padding: 1.5em 0;
+  
+  h2, h3 {
+    color: #0097a7;
+  }
+}
+
+#corporate {
   background-color:  #ff5722;
+  padding: 1.5em 0;
   
   h2, h3 {
     color: #e64a19;

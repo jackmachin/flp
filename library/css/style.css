@@ -1313,21 +1313,9 @@ SECTION STYLES
     color: #d32f2f; }
 
 #candidates {
-  background-color: #673AB7;
-  padding: 1.5em 0; }
-  #candidates h2, #candidates h3 {
-    color: #512da8; }
-
-#employer {
-  background-color: #00bcd4;
-  padding: 1.5em 0; }
-  #employer h2, #employer h3 {
-    color: #0097a7; }
-
-#corporate {
   padding: 1.5em 0;
   /* Location of the image */
-  background-image: url(/wp-content/themes/flp/library/images/candidates.jpg);
+  background-image: url(/library/images/candidates.jpg);
   /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
   /* Background image doesn't tile */
@@ -1340,7 +1328,19 @@ SECTION STYLES
   background-size: cover;
   /* Set a background color that will be displayed
      while the background image is loading */
-  background-color: #ff5722; }
+  background-color: #464646; }
+  #candidates h2, #candidates h3 {
+    color: #512da8; }
+
+#employer {
+  background-color: #00bcd4;
+  padding: 1.5em 0; }
+  #employer h2, #employer h3 {
+    color: #0097a7; }
+
+#corporate {
+  background-color: #ff5722;
+  padding: 1.5em 0; }
   #corporate h2, #corporate h3 {
     color: #e64a19; }
 
