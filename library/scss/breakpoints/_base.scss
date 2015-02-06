@@ -160,6 +160,11 @@ HEADER STYLES
   position: fixed;
   top:0;
   left: 0;
+  
+  background-image: url(/wp-content/themes/flp/library/images/header.jpg);
+  background-repeat: no-repeat;
+  background-position: center 25%;
+  background-size: cover;
   }
   
   .logo-container {
