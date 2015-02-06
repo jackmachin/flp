@@ -822,6 +822,22 @@ Stylesheet: Layout Stylesheet
   .header:last-child {
     margin-right: 0; }
 
+.main-menu {
+  float: left;
+  width: 83%;
+  margin-right: 2%; }
+  .main-menu:last-child {
+    margin-right: 0; }
+  @media only screen and (max-width: 767px) {
+    .main-menu {
+      width: 100%;
+      margin: 1%;
+      margin-left: 0; } }
+  @media only screen and (max-width: 480px) {
+    .main-menu {
+      width: 100%;
+      margin: 1%; } }
+
 .logo-container {
   float: left;
   width: 15%;
@@ -1085,6 +1101,9 @@ select {
   background-repeat: no-repeat;
   background-position: 97.5% center; }
 
+.ginput_right, .ginput_left {
+  margin-top: 0; }
+
 /*********************
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -1222,7 +1241,13 @@ HEADER STYLES
 .header {
   background-color: #000;
   color: #fff;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+.logo-container {
+  margin-top: 0; }
 
 #logo {
   margin: 0;
@@ -1262,9 +1287,10 @@ nav {
       color: #fff;
       text-decoration: none;
       padding: 0.75em;
-      text-transform: uppercase;
+      text-transform: lowercase;
       font-family: 'Oswald', "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: 700;
+      border-radius: 5px;
+      margin: 0 5px;
       /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -1322,6 +1348,9 @@ SECTION STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.content {
+  padding-top: 3.5em; }
+
 .section-title, .card-title {
   text-align: center; }
 
@@ -1868,7 +1897,7 @@ NAVIGATION STYLES
 			*/ }
         .nav li a:hover, .nav li a:focus {
           color: #fff;
-          text-decoration: underline; }
+          border: solid 1px #fff; }
       .nav li ul.sub-menu, .nav li ul.children {
         margin-top: 0;
         border: 1px solid #ccc;

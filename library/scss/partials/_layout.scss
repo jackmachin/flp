@@ -24,6 +24,12 @@ Stylesheet: Layout Stylesheet
   
     #inner-header {}
     
+      .main-menu {
+        @include grid(10);
+        @include break(tablet, 12); 
+        @include break(mobile, 12);
+      }
+    
       .logo-container {
         @include grid(2);
         @include break(tablet, 12); 

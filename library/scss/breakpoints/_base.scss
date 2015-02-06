@@ -158,6 +158,13 @@ HEADER STYLES
 	background-color: $header-bg;
   color: $white;
   margin-bottom: 1.5em;
+  position: fixed;
+  top:0;
+  left: 0;
+  }
+  
+  .logo-container {
+    margin-top: 0;
   }
 
 	#logo {
@@ -197,9 +204,10 @@ nav {
 			color: $white;
 			text-decoration: none;
 			padding: 0.75em;
-      text-transform: uppercase;
+      text-transform: lowercase;
       font-family: $oswald;
-      font-weight: 700;
+      border-radius: 5px;
+      margin: 0 5px;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -253,7 +261,8 @@ nav {
 	li.current_page_item,
 	li.current_page_ancestor {
 
-		a {}
+		a {
+    }
 
 	}  /* end current highlighters */
 
@@ -329,7 +338,8 @@ SECTION STYLES
 POSTS & CONTENT STYLES
 *********************/
 
-#content {
+.content {
+  padding-top: 3.5em;
 }
 
   .section-title, .card-title {

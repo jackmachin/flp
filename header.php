@@ -46,6 +46,9 @@
 			<header class="header" role="banner">
 
 				<div id="inner-header" class="wrapper">
+        
+          <?php get_template_part ( 'partials/navigation') ?>
+          
           <div class="logo-container">
             <?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
             <h1 id="logo"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
@@ -54,7 +57,6 @@
             <?php //bloginfo('description'); ?>
           </div>
           
-          <?php get_template_part ( 'partials/navigation') ?>
         </div>
 
 			</header>
