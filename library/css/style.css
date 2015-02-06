@@ -1303,6 +1303,9 @@ nav {
 /*********************
 SECTION STYLES
 *********************/
+#mission {
+  padding: 1.5em 0; }
+
 #programmes {
   background-color: #F44336;
   padding: 1.5em 0; }
