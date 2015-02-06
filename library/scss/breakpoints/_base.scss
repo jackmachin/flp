@@ -389,11 +389,9 @@ POSTS & CONTENT STYLES
   }
 
     .hentry, .card {
-			background-color: $article-bg;
+			background-color: inherit;
 			border-radius: 3px;
-			border: 1px solid $border-color;
       padding: 1.5em;
-      box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 
 			header {
 				border-bottom: 1px solid $light-gray;

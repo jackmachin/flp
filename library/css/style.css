@@ -1050,7 +1050,7 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   padding: 0 12px;
   margin-bottom: 14px;
   font-size: 1em;
-  color: #000;
+  color: #fff;
   border-radius: 3px;
   vertical-align: middle;
   box-shadow: none;
@@ -1129,7 +1129,7 @@ body {
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #000;
+  color: #fff;
   background-color: #fff;
   -webkit-font-smoothing: antialiased; }
 
@@ -1384,11 +1384,9 @@ POSTS & CONTENT STYLES
   color: #000; }
 
 .hentry, .card {
-  background-color: #fff;
+  background-color: inherit;
   border-radius: 3px;
-  border: 1px solid #ccc;
-  padding: 1.5em;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28); }
+  padding: 1.5em; }
   .hentry header, .card header {
     border-bottom: 1px solid #f8f9fa;
     padding: 1.5em; }
@@ -1612,10 +1610,10 @@ PAGE NAVI STYLES
       color: #fff; }
   .pagination .current {
     cursor: default;
-    color: #000; }
+    color: #fff; }
     .pagination .current:hover, .pagination .current:focus {
       background-color: #fff;
-      color: #000; }
+      color: #fff; }
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
@@ -1726,7 +1724,7 @@ COMMENT FORM STYLES
   font-style: italic;
   margin: 0; }
   .logged-in-as a {
-    color: #000; }
+    color: #fff; }
 
 .comment-form-comment {
   margin: 1.5em 0 0.75em; }
