@@ -1999,8 +1999,8 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
-  .card {
-    min-height: 700px; } }
+  .header {
+    padding: 5em 0; } }
 
 /*********************
 LARGE VIEWING SIZE
