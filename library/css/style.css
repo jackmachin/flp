@@ -1247,6 +1247,9 @@ HEADER STYLES
   background-position: center 25%;
   background-size: cover; }
 
+.header-overlay {
+  background-color: rgba(0, 0, 0, 0.7); }
+
 .logo-container {
   margin-top: 0; }
 
