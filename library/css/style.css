@@ -847,6 +847,13 @@ Stylesheet: Layout Stylesheet
       width: 100%;
       margin: 1%; } }
 
+.callout {
+  float: left;
+  width: 100%;
+  margin-right: 2%; }
+  .callout:last-child {
+    margin-right: 0; }
+
 .nav {
   float: left;
   width: 83%;

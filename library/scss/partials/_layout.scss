@@ -32,6 +32,10 @@ Stylesheet: Layout Stylesheet
         @include break(mobile, 12);
       }
       
+      .callout {
+        @include grid(12);
+      }
+      
   .nav {
     @include grid(10);
     @include break(tablet, 12); 
