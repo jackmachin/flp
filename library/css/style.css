@@ -815,13 +815,6 @@ Stylesheet: Layout Stylesheet
     display: table;
     clear: both; }
 
-.header {
-  float: left;
-  width: 100%;
-  margin-right: 2%; }
-  .header:last-child {
-    margin-right: 0; }
-
 .main-menu {
   float: left;
   width: 74.5%;

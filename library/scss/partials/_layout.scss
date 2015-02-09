@@ -17,10 +17,6 @@ Stylesheet: Layout Stylesheet
 }
 
 #container {}
-
-  .header {
-       @include grid(12); 
-  }
   
     #inner-header {}
     
