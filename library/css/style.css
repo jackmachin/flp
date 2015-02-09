@@ -1304,8 +1304,10 @@ nav {
 /*********************
 SECTION STYLES
 *********************/
-#mission {
-  padding: 1.5em 0; }
+.callout {
+  text-align: center;
+  font-size: 1.25em;
+  font-family: 'Oswald', "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 #programmes {
   padding: 1.5em 0;
