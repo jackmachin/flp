@@ -1205,6 +1205,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   font-weight: 700;
   font-family: 'Oswald', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
   /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -1242,9 +1243,6 @@ HEADER STYLES
 .header {
   background-color: #000;
   color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
   background-image: url(/wp-content/themes/flp/library/images/header.jpg);
   background-repeat: no-repeat;
   background-position: center 25%;
