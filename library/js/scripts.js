@@ -128,7 +128,7 @@ jQuery(document).ready(function($) {
     {
       
       var target = $(this.hash),
-      headerHeight = $(".header").height(); // Get fixed header height
+      headerHeight =  0; //$(".header").height(); // Get fixed header height
             
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
               
