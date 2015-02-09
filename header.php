@@ -54,8 +54,9 @@
             <h1 id="logo"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
 
             <?php // if you'd like to use the site description you can un-comment it below ?>
-            <?php //bloginfo('description'); ?>
           </div>
+          
+          <p class="callout"><?php bloginfo('description'); ?></p>
           
         </div>
 
