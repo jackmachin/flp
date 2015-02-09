@@ -1198,7 +1198,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   font-weight: 700;
   font-family: 'Oswald', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #fff;
   /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -1363,7 +1362,7 @@ POSTS & CONTENT STYLES
   text-align: center; }
 
 .section-title {
-  color: #000; }
+  color: #fff; }
 
 .hentry, .card {
   background-color: inherit;
