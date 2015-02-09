@@ -308,11 +308,8 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
-.header {
-  padding: 2em 0; }
-
 .header-overlay {
-  margin: 2em 0; }
+  padding: 2em 0; }
 
 /*
 you can call the larger styles if you want, but there's really no need
