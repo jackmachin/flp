@@ -877,6 +877,14 @@ Stylesheet: Layout Stylesheet
   #main:last-child, .main:last-child {
     margin-right: 0; }
 
+.readable {
+  float: left;
+  width: 66%;
+  margin-left: 17%;
+  margin-right: 2%; }
+  .readable:last-child {
+    margin-right: 0; }
+
 .card {
   float: left;
   width: 32%;
