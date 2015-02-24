@@ -2,16 +2,24 @@
 
     <div id="top" class="content">
     
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <div class="wrapper">
       
-          <?php
-            // the content (pretty self explanatory huh)
-            the_content();
-          ?>
+        <div class="container">
+    
+          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+          
+              <?php
+                // the content (pretty self explanatory huh)
+                the_content();
+              ?>
 
-      <?php endwhile; else : ?>
+          <?php endwhile; else : ?>
 
-      <?php endif; ?>
+          <?php endif; ?>
+          
+        </div>
+      
+      </div>
       
     </div>
 
