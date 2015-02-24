@@ -1134,6 +1134,9 @@ body {
   background-color: #fff;
   -webkit-font-smoothing: antialiased; }
 
+.readble {
+  color: #000; }
+
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
