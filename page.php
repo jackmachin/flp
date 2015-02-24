@@ -12,11 +12,12 @@
                 <header>
                   <h1 class="article-title"><?php the_title();?></h1>
                 </header>
+                <div class="entry-content">
               <?php
                 // the content (pretty self explanatory huh)
                 the_content();
               ?>
-              
+                </div>
               </article>
 
           <?php endwhile; else : ?>
