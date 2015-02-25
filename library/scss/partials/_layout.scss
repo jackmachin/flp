@@ -27,7 +27,7 @@ Stylesheet: Layout Stylesheet
       }
     
       .logo-container {
-        @include grid(3);
+        @include grid(3, $fold:"right");
         @include break(tablet, 12); 
         @include break(mobile, 12);
       }
