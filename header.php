@@ -48,7 +48,11 @@
 
           <div id="inner-header" class="wrapper">
           
+          <?php if (is_page ('questionnaire')) {} else { ?>
+           
             <?php get_template_part ( 'partials/navigation') ?>
+            
+          <?php } ?>
             
             <div class="logo-container">
               <?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
